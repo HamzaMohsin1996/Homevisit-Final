@@ -1,0 +1,193 @@
+<html>
+   <head>
+      <title>Variant Products</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap" rel="stylesheet">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <script src="~/js/jquery.floatThead.min.js"></script>
+      <!-- main css -->
+      <!-- <link href="https://tools.homevisit.com/chili/css/screen.css" rel="stylesheet" /> -->
+      <!-- Font css -->
+      <link href='https://fonts.googleapis.com/css?family=Roboto:400,500,700,400italic,500italic%7CRoboto+Condensed:300,400%7CLato:400,700%7COpen+Sans:400,600' rel='stylesheet' type='text/css'>
+      <link href='https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet' type='text/css'>
+      
+      <!-- Latest compiled and minified CSS -->
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+      <!-- Optional theme -->
+      <link rel="stylesheet" href="assets/css/style.css" type="text/css">
+   </head>
+   <body>
+      <div class="main-wrapper product-details">
+         <div class="page-nav">
+            <div class="custom-container">
+               <p>Product Catalog &nbsp;><span>Manage Products &nbsp;></span><span class="p-details">Variant Details</span></</p>
+            </div>
+         </div>
+         <div class="custom-container">
+            <h1>10 Photo Pkg</h1>
+            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                        <li class="nav-item">
+                           <a class="nav-link active" id="products-tab" data-toggle="tab" href="#products" role="tab" aria-controls="products" aria-selected="true">Details</a>
+                        </li>
+                        <li class="nav-item">
+                           <a class="nav-link" id="printprice-tab" data-toggle="tab" href="#pricing" role="tab" aria-controls="printprice" aria-selected="false">Pricing</a>
+                        </li>
+                     </ul>
+         </div>
+
+         <div class="w-100 tab-content variant-details" id="myTabContent">
+            
+         <div class="tab-pane fade show active" id="products" role="tabpanel" aria-labelledby="products-tab">
+         <div class="product-table-wrapper">
+             <div class="custom-container">
+            <div class="d-flex align-items-center products-filter"> 
+               <h2>Details</h2>
+            </div>
+         </div>
+            <div class="custom-container">
+                  <form>
+                        <div class="inner-content">
+                           <h2>10 Photo Pkg</h2>
+                           <div class="row m-0">
+                              <div class="form-group col-sm-12">
+                                 <label for="name">Parent Product</label>
+                                 <select class="form-control property-website-variant" id="exampleFormControlSelect1">
+                                    <option>Property Website</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                 </select>
+                              </div>
+                              <div class="form-group col-sm-6">
+                                 <label for="exampleFormControlSelect1">Name</label>
+                                   <input type="text" class="form-control" placeholder="10 Photo Pkg">
+                              </div>
+                              <div class="form-group col-md-3 col-sm-6">
+                                 <label for="name">SKU Number</label>
+                                 <input type="text" class="form-control" placeholder="HVA-1000">
+                              </div>
+                              <div class="form-group col-md-3 col-sm-6">
+                                 <label for="name">Default (National) Price</label>
+                                  <input type="text" class="form-control" placeholder="119.00">
+                              </div>
+                              <div class="form-group col-md-3 col-sm-6">
+                                 <label for="name">Min Value</label>
+                                 <input type="text" class="form-control" placeholder="enter quantity">
+                              </div>
+                              <div class="form-group col-md-3 col-sm-6">
+                                 <label for="name">Max Value</label>
+                                 <input type="text" class="form-control" placeholder="enter quantity">
+                              </div>
+
+                              <div class="form-group col-md-3 col-sm-6">
+                                 <label for="name">Gloss UV Included <span class="text-danger"> *print only</span></label>
+                                 <select class="form-control" id="exampleFormControlSelect1">
+                                    <option>True</option>
+                                    <option>False</option>
+                                 </select>
+                              </div>
+                              <div class="form-group col-md-3 col-sm-6">
+                              <label for="name">Matte UV Included  <span class="text-danger">*print only</span></label>
+                                 <select class="form-control" id="exampleFormControlSelect1">
+                                    <option>False</option>
+                                    <option>True</option>
+                                 </select>
+                              </div>
+                              <div class="form-group col-md-12 col-sm-6">
+                                 <label for="name">Print Name  <span class="text-danger">*print only</span></label>
+                                <input type="text" class="form-control property-website-variant-print" placeholder="enter print name">
+                              </div>
+                            
+                           </div>
+                        </div>
+                        <div class="submit-btn">
+                           <button type="submit" class="btn btn-blue">Save</button>
+                        </div>
+                     </form>
+                  </div>
+               </div>
+            </div>
+            <div class="tab-pane fade " id="pricing" role="tabpanel" aria-labelledby="products-tab">
+               <div class="product-table-wrapper">
+               <div class="custom-container">
+                <form>
+                     <div class="d-flex align-items-center products-filter flex-column">
+                        <h2 class="w-100">Pricing</h2>
+                        <div class="form-group col-sm-12 p-0 mt-2 mb-0">
+                           <div class="col-sm-6 p-0 text-left">
+                                 <label for="name">First,Select Group/Region</label>
+                                 <select class="form-control" id="exampleFormControlSelect1">
+                                    <option>Default National Pricing</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                </select>
+                               </div>
+                           </div>
+                     </div>
+                        <div class="inner-content">
+                           <h2>Property Website</h2>
+                        
+                           <div class="row m-0 d-flex align-items-center "> 
+                              <div class="adding-row-pricing d-flex align-items-center" >
+                              <div class="form-group  col-xl-2  col-md-6">
+                                 <label for="name">Min Value </label>
+                                 <input type="text" class="form-control" placeholder="25" >
+                              </div>
+                              <div class="form-group  col-xl-2  col-md-6">
+                                 <label for="name">Max Value Optional</label>
+                                 <input type="text" class="form-control" placeholder="Enter Quantity" >
+                              </div>
+                                <div class="form-group  col-xl-2  col-md-6">
+                                 <label for="name">Display Price</label>
+                                 <input type="text" class="form-control" placeholder="$19.99" >
+                              </div>
+                               <div class="form-group  col-xl-2  col-md-6">
+                                 <label for="name">Retail Price</label>
+                                 <input type="text" class="form-control" placeholder="$19.99" >
+                              </div>
+                               <div class="form-group  col-xl-2  col-md-6">
+                                 <label for="name">Inoice Price</label>
+                                 <input type="text" class="form-control" placeholder="$19.99" >
+                              </div>
+                              <div class="col-xl-2  col-sm-12">
+                                 <a href="javascript:void(0)" class="btn-delete btn-common" ><i class="fa fa-close"></i><span> Delete row</span> </a>
+                              </div>
+
+                           </div>
+
+                           </div>
+                           <div class="row m-0 d-flex align-items-center pt-0">
+                              <div class="col-xl-10 col-sm-12">
+                                 <p class="sr-only">Empty</p> 
+                              </div>
+                              <div class="col-xl-2 col-sm-12 ml-auto p-20 btn-group">
+                                 <a href="javascript:void(0)" class="add-btn btn-common" ><i class="fa fa-plus"></i><span> Add row</span> </a>
+                              </div>
+                           </div>
+                        </div>
+                      <div class="submit-btn btn-pricing">
+                           <button  class="btn btn-del">Delete Pricing</button>
+                           <button type="submit" class="btn btn-blue">Save Pricing</button>
+                        </div>
+                     </form>
+                  </div>
+            
+      </div>
+   </div>
+      </div>
+      <script type="text/javascript">
+         $(".add-btn").click(function () {
+            var elmnt = document.getElementsByClassName("adding-row-pricing")[0];
+            var cln = elmnt.cloneNode(true);
+            document.getElementsByClassName("adding-row-pricing")[0].after(cln);
+   });
+   </script>
+      <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+   </body>
+</html>

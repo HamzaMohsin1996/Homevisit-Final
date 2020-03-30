@@ -1,0 +1,566 @@
+<html>
+   <head>
+      <title>Manage Products</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap" rel="stylesheet">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <script src="~/js/jquery.floatThead.min.js"></script>
+      <!-- main css -->
+      <!-- <link href="https://tools.homevisit.com/chili/css/screen.css" rel="stylesheet" /> -->
+      <!-- Font css -->
+      <link href='https://fonts.googleapis.com/css?family=Roboto:400,500,700,400italic,500italic%7CRoboto+Condensed:300,400%7CLato:400,700%7COpen+Sans:400,600' rel='stylesheet' type='text/css'>
+      <!-- Latest compiled and minified CSS -->
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+      <!-- Optional theme -->
+      <link rel="stylesheet" href="assets/css/style.css" type="text/css">
+   </head>
+   <body>
+      <div class="main-wrapper">
+         <div class="page-nav">
+            <div class="custom-container">
+               <p>Product Catalog &nbsp;><span>Manage Products</span></p>
+            </div>
+         </div>
+         <div class="custom-container">
+            <h1>Manage Products</h1>
+            <div class="products-wrapper">
+               <div class="d-flex mobile-product">
+                  <div class="product-table-nav">
+                     <ul class="nav nav-tabs home-page-tabs" id="myTab" role="tablist">
+                        <li class="nav-item">
+                           <a class="nav-link active" id="products-tab" data-toggle="tab" href="#products-tab-content" role="tab" aria-controls="products" aria-selected="true">Products</a>
+                        </li>
+                        <li class="nav-item">
+                           <a class="nav-link" id="variants-tab" data-toggle="tab" href="#variants-tab-content" role="tab" aria-controls="variants" aria-selected="false">Variants</a>
+                        </li>
+                        <li class="nav-item">
+                           <a class="nav-link" id="addon-tab" data-toggle="tab" href="#addon-tab-content" role="tab" aria-controls="addon" aria-selected="false">Add-Ons</a>
+                        </li>
+                         <li class="nav-item">
+                           <a class="nav-link" id="groups-tab" data-toggle="tab" href="#groups-tab-content" role="tab" aria-controls="addon" aria-selected="false">Groups</a>
+                        </li>
+                        
+                     </ul>
+                  </div>
+                  <a href="#" class="btn btn-blue ml-auto modal-btn" data-toggle="modal" data-target="#products">Add New <span>Product</span></a>
+               </div>
+            </div>
+         </div>
+         <div class="product-table-wrapper">
+            <div class="custom-container">
+              
+               <div class="w-100 tab-content" id="myTabContent">
+                  <div class="tab-pane fade show active" id="products-tab-content" role="tabpanel" aria-labelledby="products-tab">
+                      <div class="d-flex align-items-center products-filter">
+                  <h2>Products</h2>
+                  <form>
+                     <input type="text" class="form-control" placeholder="Search for a product name or sku number">
+                     <button type="submit" class="btn btn-blue">Search</button>
+                  </form>
+                  <div class="dropdown">
+                     <button class="btn btn-secondary dropdown-toggle category-dropdown" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                     Category
+                     </button>
+                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                     </div>
+                  </div>
+                  <a href="#" class="text-danger pl-3">Reset</a>
+               </div>
+                     <table class="table table-striped product-table d-none d-lg-table">
+                        <thead>
+                           <tr>
+                              <th scope="col">PRODUCT NAME</th>
+                              <th scope="col">CATEGORY</th>
+                              <th scope="col">SKU</th>
+                              <th scope="col"></th>
+                           </tr>
+                        </thead>
+                        <tbody>
+                           <tr>
+                              <td class="text-blue">Property Website</td>
+                              <td>Mark</td>
+                              <td>Otto</td>
+                              <td><a href="#" class="edit-product">EDIT PRODUCT</a></td>
+                           </tr>
+                           <tr>
+                              <td class="text-blue">Property Website</td>
+                              <td>Jacob</td>
+                              <td><a href="#" class="view-product">view variant</a></td>
+                              <td><a href="#" class="edit-product">EDIT PRODUCT</a></td>
+                           </tr>
+                           <tr>
+                              <td class="text-blue">Property Website</td>
+                              <td>Larry</td>
+                              <td>the Bird</td>
+                              <td><a href="#" class="edit-product">EDIT PRODUCT</a></td>
+                           </tr>
+                        </tbody>
+                     </table>
+                     <table class="table table-striped product-table d-lg-none">
+                        <thead>
+                           <tr>
+                              <th scope="col">PRODUCT NAME</th>
+                              <td class="text-blue">Property Website</td>
+                           </tr>
+                           <tr>
+                              <th scope="col">CATEGORY</th>
+                              <td>Mark</td>
+                           </tr>
+                           <tr>
+                              <th scope="col">SKU</th>
+                              <td>Otto</td>
+                           </tr>
+                           <tr>
+                              <th scope="col"></th>
+                              <td><a href="#" class="edit-product">EDIT PRODUCT</a></td>
+                           </tr>
+                        </thead>
+                     </table>
+                  </div>
+                  <div class="tab-pane fade" id="variants-tab-content" role="tabpanel" aria-labelledby="variants-tab">
+                      <div class="d-flex align-items-center products-filter">
+                  <h2>Variants</h2>
+                  <form>
+                     <input type="text" class="form-control" placeholder="Search for a variant name or sku number">
+                     <button type="submit" class="btn btn-blue">Search</button>
+                  </form>
+                  <div class="dropdown">
+                     <button class="btn btn-secondary dropdown-toggle category-dropdown" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                     Category
+                     </button>
+                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                     </div>
+                  </div>
+                  <a href="#" class="text-danger pl-3">Reset</a>
+               </div>
+                     <table class="table table-striped product-table d-none d-lg-table">
+                        <thead>
+                           <tr>
+                              <th scope="col">PARENT PRODUCT</th>
+                              <th scope="col">VARIANT NAME</th>
+                              <th scope="col">SKU</th>
+                              <th scope="col"></th>
+                              <th scope="col"></th>
+                           </tr>
+                        </thead>
+                        <tbody>
+                           <tr>
+                              <td >Photography</td>
+                              <td class="text-blue"><a href="variant-details.html">10 Photo PKG</a></td>
+                              <td>HVA-10000</td>
+                              <td><a href="#" class="edit-product">EDIT VARIANT</a></td>
+                              <td><a href="#" class="delete-product">DELETE VARIANT</a></td>
+                           </tr>
+                           <tr>
+                               <td >Photography</td>
+                               <td class="text-blue"><a href="variant-details.html">20 Photo PKG</a></td>
+                              <td>HVA-1002</td>
+                              <td><a href="#" class="edit-product">EDIT VARIANT</a></td>
+                              <td><a href="#" class="delete-product">DELETE VARIANT</a></td>
+                           </tr>
+                           <tr>
+                               <td >Photography</td>
+                               <td class="text-blue"><a href="variant-details.html">30 Photo PKG</a></td>
+                              <td>HVA-1003</td>
+                              <td><a href="#" class="edit-product">EDIT VARIANT</a></td>
+                              <td><a href="#" class="delete-product">DELETE VARIANT</a></td>
+                           </tr>
+                        </tbody>
+                     </table>
+                     <table class="table table-striped product-table d-lg-none">
+                        <thead>
+                           <tr>
+                              <th scope="col">PARENT PRODUCT</th>
+                              <td>PHOTOGRAPHY</td>
+                           </tr>
+                           <tr>
+                              <th scope="col">VARIANT NAME</th>
+                              <td class="text-blue"><a href="variant-details.html">30 Photo PKG</a></td>
+                           </tr>
+                           <tr>
+                              <th scope="col">SKU</th>
+                              <td>HVA-1003</td>
+                           </tr>
+                           <tr>
+                              <th scope="col"></th>
+                              <td><a href="#" class="edit-product">EDIT VARIANT</a></td>
+                           </tr>
+                           <tr>
+                              <th scope="col"></th>
+                              <td><a href="#" class="delete-product">DELETE VARIANT</a></td>
+                           </tr>
+                        </thead>
+                     </table>
+                  </div>
+                  <div class="tab-pane fade" id="addon-tab-content" role="tabpanel" aria-labelledby="addon-tab">
+                     <div class="d-flex align-items-center products-filter">
+                        <h2>Add-Ons</h2>
+                        <form>
+                           <input type="text" class="form-control" placeholder="Search for a variant name or sku number">
+                           <button type="submit" class="btn btn-blue">Search</button>
+                        </form>
+                        <div class="dropdown">
+                           <button class="btn btn-secondary dropdown-toggle category-dropdown" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                           Parent Product
+                           </button>
+                           <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                              <a class="dropdown-item" href="#">Action</a>
+                              <a class="dropdown-item" href="#">Another action</a>
+                              <a class="dropdown-item" href="#">Something else here</a>
+                           </div>
+                        </div>
+                        <a href="#" class="text-danger pl-3">Reset</a>
+                    </div>
+                    <div class="custom-container pl-0 note-p">
+                    <div class="row m-0">
+                           <p class="w-100"><strong>Note: </strong>To create Add-on,create a new product and specify Available For Individual Sale = False.</p>
+                        </div>
+                     </div>
+                     <table class="table table-striped product-table d-none d-lg-table">
+                        <thead>
+                           <tr>
+                              <th scope="col">PARENT PRODUCT</th>
+                              <th scope="col">ADD-ON NAME</th>
+                              <th scope="col"></th>
+                           </tr>
+                        </thead>
+                        <tbody>
+                           <tr>
+                              <td>Photography</td>
+                              <td class="text-blue">Custom Domain Name</td>
+                              <td><a href="#" class="delete-product">DELETE ADD-ON</a></td>
+                           </tr>
+                           <tr>
+                              <td>Photography</td>
+                              <td class="text-blue">100 PHOTO ADD-ON</td>
+                              <td><a href="#" class="delete-product">DELETE ADD-ON</a></td>
+                           </tr>
+                           <tr>
+                              <td>Photography</td>
+                              <td class="text-blue">NIGHT PHOTOGRAPHY</td>
+                              <td><a href="#" class="delete-product">DELETE ADD-ON</a></td>
+                           </tr>
+                        </tbody>
+                     </table>
+                     <table class="table table-striped product-table d-lg-none">
+                        <thead>
+                           <tr>
+                              <th scope="col">PARENT PRODUCT</th>
+                              <td>Photography</td>
+                           </tr>
+                           <tr>
+                              <th scope="col">ADD-ON NAME</th>
+                              <td class="text-blue">Mark</td>
+                           </tr>
+                           <tr>
+                              <th scope="col"></th>
+                              <td><a href="#" class="delete-product">DELETE ADD-ON</a></td>
+                           </tr>
+                        </thead>
+                     </table>
+                  </div>
+                 
+                  <div class="tab-pane fade" id="groups-tab-content" role="tabpanel" aria-labelledby="groups-tab-content">
+                     <div class="d-flex align-items-center products-filter">
+                  <h2>Groups</h2>
+                  <form>
+                     <input type="text" class="form-control" placeholder="Search for a group name or sku number">
+                     <button type="submit" class="btn btn-blue">Search</button>
+                  </form>
+                  <div class="dropdown">
+                     <button class="btn btn-secondary dropdown-toggle category-dropdown" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                     Type
+                     </button>
+                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                     </div>
+                  </div>
+                  <a href="#" class="text-danger pl-3">Reset</a>
+               </div>
+                     <table class="table table-striped product-table d-none d-lg-table">
+                        <thead>
+                           <tr>
+                              <th scope="col">GROUP NAME</th>
+                              <th scope="col">TYPE</th>
+                              <th scope="col">ID</th>
+                              <th scope="col"></th>
+                              <th scope="col"></th>
+                           </tr>
+                        </thead>
+                        <tbody>
+                           <tr>
+                              <td class="text-blue">NATIONAL DEFAULT</td>
+                              <td>National Default</td>
+                              <td>100</td>
+                              <td><a href="#" class="edit-product">VIEW DETAILS</a></td>
+                              <td><a href="#" class="edit-product" data-toggle="modal" data-target="#clone-pricing">CLONE PRICING</a></td>
+                           </tr>
+                          <tr>
+                              <td class="text-blue">NATIONAL DEFAULT</td>
+                              <td>National Default</td>
+                              <td>100</td>
+                              <td><a href="#" class="edit-product">VIEW DETAILS</a></td>
+                              <td><a href="#" class="edit-product" data-toggle="modal" data-target="#clone-pricing">CLONE PRICING</a></td>
+                           </tr>
+                           <tr>
+                              <td class="text-blue">NATIONAL DEFAULT</td>
+                              <td>National Default</td>
+                              <td>100</td>
+                              <td><a href="#" class="edit-product">VIEW DETAILS</a></td>
+                              <td><a href="#" class="edit-product" data-toggle="modal" data-target="#clone-pricing">CLONE PRICING</a></td>
+                           </tr>
+                        </tbody>
+                     </table>
+                     <table class="table table-striped product-table d-lg-none">
+                        <thead>
+                           <tr>
+                              <th scope="col">GROUP NAME</th>
+                              <td class="text-blue">National Default</td>
+                           </tr>
+                           <tr>
+                              <th scope="col">TYPE</th>
+                              <td>National Default</td>
+                           </tr>
+                           <tr>
+                              <th scope="col">ID</th>
+                              <td>100</td>
+                           </tr>
+                           <tr>
+                              <th scope="col"></th>
+                              <td><a href="#" class="edit-product">VIEW DETAILS</a></td>
+                           </tr>
+                           <tr>
+                              <th scope="col"></th>
+                              <td><a href="#" class="edit-product" data-toggle="modal" data-target="#clone-pricing">CLONE PRICING</a></td>
+                           </tr>
+                        </thead>
+                     </table>
+                  </div>
+                  
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- The New Product Modal -->
+      <div class="modal fade product-modal tabs-modal" id="products">
+         <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+               <!-- Modal Header -->
+               <div class="modal-header">
+                  <h4 class="modal-title">Add a Product</h4>
+                  <!-- <button type="button" class="close" data-dismiss="modal">&times;</button> -->
+               </div>
+               <!-- Modal body -->
+               <div class="modal-body">
+                  <form class="modal-add-product">
+                     <div class="row m-0">
+                        <div class="form-group col-sm-12">
+                           <label for="name">Name</label>
+                           <input type="text" class="form-control" placeholder="Enter a name">
+                        </div>
+                        <div class="form-group col-sm-6">
+                           <label for="name">Category</label>
+                           <select class="form-control" id="exampleFormControlSelect1">
+                              <option>Property_Website</option>
+                              <option>1</option>
+                           </select>
+                        </div>
+                        <div class="form-group col-sm-6">
+                           <label for="name">Variant Type</label>
+                           <select class="form-control" id="exampleFormControlSelect1">
+                              <option>None</option>
+                              <option>1</option>
+                           </select>
+                        </div>
+                        <div class="form-group col-sm-12 sku-number">
+                           <label for="name">SKU Number <span class="text-red">only if Variant Type is set to none</span></label>
+                           <div class="col-sm-6 pl-0">
+                           <select class="form-control" id="exampleFormControlSelect1">
+                              <option>IE, HV-3000</option>
+                              <option>1</option>
+                           </select>
+                        </div>
+                        </div>
+                        <div class="col w-100 add-product">
+                           <button class="btn btn-blue">Add New product</button>
+                        </div>
+                     </div>
+                  </form>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- The New Variant Modal -->
+      <div class="modal fade product-modal tabs-modal" id="Variants">
+         <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+               <!-- Modal Header -->
+               <div class="modal-header">
+                  <h4 class="modal-title">Add a Variant</h4>
+                  <!-- <button type="button" class="close" data-dismiss="modal">&times;</button> -->
+               </div>
+               <!-- Modal body -->
+               <div class="modal-body">
+                  <form class="modal-add-product">
+                     <div class="row m-0">
+                        <div class="form-group col-sm-12">
+                           <label for="name">Name</label>
+                           <input type="text" class="form-control" placeholder="Enter a name">
+                        </div>
+                        <div class="form-group col-sm-6">
+                           <label for="name">Category</label>
+                           <select class="form-control" id="exampleFormControlSelect1">
+                              <option>Property_Website</option>
+                              <option>1</option>
+                           </select>
+                        </div>
+                        <div class="form-group col-sm-6">
+                           <label for="name">Variant Type</label>
+                           <select class="form-control" id="exampleFormControlSelect1">
+                              <option>None</option>
+                              <option>1</option>
+                           </select>
+                        </div>
+                        <div class="form-group col-sm-12 sku-number">
+                           <label for="name">SKU Number <span class="text-red">only if Variant Type is set to none</span></label>
+                           <div class="col-sm-6 pl-0">
+                           <select class="form-control" id="exampleFormControlSelect1">
+                              <option>IE, HV-3000</option>
+                              <option>1</option>
+                           </select>
+                        </div>
+                        </div>
+                        <div class="col w-100 add-product">
+                           <button class="btn btn-blue">Add New product</button>
+                        </div>
+                     </div>
+                  </form>
+               </div>
+            </div>
+         </div>
+      </div>
+       <!-- The Add-On Modal -->
+      <div class="modal fade add-on-modal tabs-modal" id="add-ons">
+         <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+               <!-- Modal Header -->
+               <div class="modal-header">
+                  <h4 class="modal-title">Add an Add-On Product</h4>
+                  <!-- <button type="button" class="close" data-dismiss="modal">&times;</button> -->
+               </div>
+               <!-- Modal body -->
+               <div class="modal-body">
+                  <form class="modal-add-product">
+                     <div class="row m-0">
+                        <div class="form-group col-sm-6">
+                           <label for="name">Parent Product</label>
+                           <select class="form-control" id="exampleFormControlSelect1">
+                              <option>Property Website</option>
+                              <option>1</option>
+                           </select>
+                        </div>
+                        <div class="form-group col-sm-6">
+                           <label for="name">Add-On Name</label>
+                           <select class="form-control" id="exampleFormControlSelect1">
+                              <option>Custom Domain Name</option>
+                              <option>1</option>
+                           </select>
+                        </div>
+                        <div class="col w-100 add-product">
+                           <button class="btn btn-blue">Add New Add-On</button>
+                        </div>
+                     </div>
+                  </form>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- The New Variant Modal -->
+      <div class="modal fade product-modal tabs-modal" id="Groups">
+         <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+               <!-- Modal Header -->
+               <div class="modal-header">
+                  <h4 class="modal-title">Add a Group</h4>
+                  <!-- <button type="button" class="close" data-dismiss="modal">&times;</button> -->
+               </div>
+               <!-- Modal body -->
+               <div class="modal-body">
+                  <form class="modal-add-product">
+                     <div class="row m-0">
+                        <div class="form-group col-sm-12">
+                           <label for="name">Name</label>
+                           <input type="text" class="form-control" placeholder="Triad Multiple Listing Service Copy">
+                           </div>
+                        <div class="form-group col-sm-12">
+                           <label for="name">Type</label>
+                           <select class="form-control" id="exampleFormControlSelect1">
+                              <option>Multiple Listing Service</option>
+                              <option>1</option>
+                           </select>
+                        </div>
+                        <div class="form-group col-sm-12">
+                           <label for="name">Type</label>
+                           <textarea class="form-control"  rows="2" placeholder="Price group for the Triad Multiple Listing Service in North Carolina."></textarea>
+                        </div>
+                        <div class="col w-100 add-product">
+                           <button class="btn btn-blue">Add New Group</button>
+                        </div>
+                     </div>
+                  </form>
+               </div>
+            </div>
+         </div>
+      </div>
+
+       <!-- The New Clone Pricing Modal -->
+      <div class="modal fade product-modal tabs-modal" id="clone-pricing">
+         <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+               <!-- Modal Header -->
+               <div class="modal-header">
+                  <h4 class="modal-title">Clone Pricing From a Group</h4>
+                  <!-- <button type="button" class="close" data-dismiss="modal">&times;</button> -->
+               </div>
+               <!-- Modal body -->
+               <div class="modal-body">
+                  <form class="modal-add-product">
+                     <div class="row m-0">
+                        <div class="form-group col-sm-12">
+                           <label for="name">Name</label>
+                           <input type="text" class="form-control" placeholder="Triad Multiple Listing Service Copy">
+                           </div>
+                        <div class="form-group col-sm-12">
+                           <label for="name">Assign Pricing From:</label>
+                           <select class="form-control" id="exampleFormControlSelect1">
+                              <option>Multiple Listing Service</option>
+                              <option>1</option>
+                           </select>
+                        </div>
+                        
+                        <div class="col w-100 add-product">
+                           <button class="btn btn-blue">Clone Pricing</button>
+                        </div>
+                     </div>
+                  </form>
+               </div>
+            </div>
+         </div>
+      </div>
+     
+      <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+      <script type="text/javascript" src="assets/js/custom.js"></script>
+
+   </body>
+</html>
